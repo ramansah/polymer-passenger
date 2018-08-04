@@ -2,6 +2,7 @@ import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import '@polymer/paper-input/paper-input.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/polymer/lib/elements/dom-if.js';
+import '@polymer/google-map/google-map.js';
 import './shared-styles.js';
 
 class MyDashboard extends PolymerElement {
@@ -16,6 +17,12 @@ class MyDashboard extends PolymerElement {
           background: deeppink;
           color: white;
         }
+        google-map {
+          margin: 20px;
+          margin-top: 50px;
+          height: 300px;
+          display: block;
+        }
       </style>
 
       <div class="card">
@@ -25,6 +32,9 @@ class MyDashboard extends PolymerElement {
         <div align="center">
         <paper-button raised on-click="handleClick" class="green">Search</paper-button>
         </div>
+        <google-map fit-to-markers api-key="AIzaSyD3E1D9b-Z7ekrT3tbhl_dy8DCXuIuDDRc">
+          <google-map-marker slot="markers" latitude="18.55" longitude="73.92" draggable="true"></google-map-marker>
+        </google-map>
       </div>
 
       <template is="dom-if" if="{{searched}}">

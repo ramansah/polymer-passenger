@@ -13,9 +13,9 @@
     "test:integration": "polymer build # test that psk builds without error with the CLI"
   },
   "dependencies": {
-    "@em-polymer/google-map": "^3.0.0-pre.5",
     "@polymer/app-layout": "^3.0.0-pre.15",
     "@polymer/app-route": "^3.0.0-pre.15",
+    "@polymer/google-map": "github:GoogleWebComponents/google-map#pull/421/head",
     "@polymer/iron-flex-layout": "^3.0.0-pre.15",
     "@polymer/iron-iconset-svg": "^3.0.0-pre.15",
     "@polymer/iron-media-query": "^3.0.0-pre.15",
